@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyLeaf</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/2.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: #4BC68B
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+        .heading1
+        {
+            text-align: center;
+            font-family: 'IBM Plex Serif';
+            color: #216B39;
+            font-size: 30px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+        .heading2
+        {
+            text-align: center;
+            font-family: 'IBM Plex Sans';
+            color: #4BC68B;
+            font-size: 33px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+        .butt
+        {
+            font-family: 'IBM Plex Serif';
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+        .butt .butt2
+        {    
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 7px;
+            border: none;
+            color: #216B39;
+            font-size: 30px;
+            background-color: #CFFFDA;
+            padding-left: 125px;
+            padding-right: 125px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-weight: bolder;
+            
+        }
+
+        .butt2:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        @media only screen and (max-width: 768px) {
+        .butt,
+        .butt2 { 
+        font-size: 20px; 
+        padding-left: 20px; 
+        padding-right: 20px; 
+        padding-top: 160px; 
+        padding-bottom: 1px; 
+        }
+
+        .heading1{
+            font-size: 22px;
+        }
+
+        .heading2{
+            position: absolute;
+            top: 58%;
+            font-size: 28px;
+        }
+
+        .content{
+            position: absolute;
+            width: 80%;
+        }
+
+        img{
+            width: 60%;
+        }
+
+        body{
+            height: 53vh;
+            
+        }
+    }        
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="content">
+        <a href="{{ url_for('welcome_page') }}">
+        <img src="../static/cornerlogo.png" alt="Corner_Logo">
+    </a>
+    </div>
+
+    <div class="heading1">
+        <h2>Welcome to Healthy Leaf</h2>
+    </div>
+    <div class="heading2">
+        <p>Do you want to identify disease of your plant?</p>
+    </div>
+    <div class="butt">
+        <a href="/upload_image">
+            <button type="button" class="butt2">
+                Let's Start
+            </button>
+        </a>
+    </div>
+
+    
+</body>
+
+</html>

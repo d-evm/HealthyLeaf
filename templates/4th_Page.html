@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .container{
+           width: 1536px;
+           height: 73.8px;
+           background-color: #55D196;
+           position: relative;
+           top: 0%;
+           transform: translate(-0%, -0%);
+        }
+
+        .im2{
+            position: absolute;
+            top: 95%;
+            left: 0%;
+            width: 1536px;
+            height: 621.31px;
+        }
+
+        .imag {
+            height: 461px;
+            width: 419px;
+            position: absolute;
+            top: 470%;
+            left: 17%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 12%;
+        }
+
+        .heading1
+        {
+            text-align: center;
+            font-family: 'IBM Plex Sans';
+            color: #CFFFDA;
+            font-size: 30px;
+            position: inherit;
+            margin-top: 4%;
+            margin-left: 63%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+        .minih{
+            position: inherit;
+            margin-left: 4%;
+            color: #CFFFDA;
+            font-family: 'IBM Plex Sans';
+            font-size: 18px;
+            font-weight: 280;
+        }
+
+        .minih2{
+            position: inherit;
+            margin-left: 8%;
+            color: #216B39;
+            font-family: 'IBM Plex Sans';
+            font-size: 18px;
+            font-weight: 280;
+        }
+
+        .desc{
+            color: white;
+            position: absolute;
+            margin-top: 12%;
+            margin-left: 55%;
+            font-size: 24px;
+            font-family: 'IBM Plex Serif';
+            font-weight: 150;
+        }
+
+        @media (max-width: 720px) {
+            .container{
+                width: 1500px;
+                height: 108.8px;
+                background-color: #55D196;
+                position: relative;
+                top: 0%;
+                transform: translate(-0%, -0%);
+            }
+
+            .im2{
+                position: absolute;
+                top: 95%;
+                left: 0%;
+                width: 1500px;
+                height: 2560.31px;
+            }
+
+            .desc{
+                margin-top: 70%;
+                margin-left: 25%;
+                font-size: 75px;
+            }
+
+            .imag{
+                height: 628px;
+                width: 620px;
+                top: 485%;
+                left: 25%;
+            }
+
+            .heading1{
+                font-size: 45px;
+                margin-top: 30%;
+                margin-left: 72%;
+                width: 775px;
+            }
+        }
+
+        /* @media (max-width: 720px) {
+            .container{
+           width: 1536px;
+           height: 104.8px;
+           background-color: #55D196;
+           position: absolute;
+           top: 0%;
+           transform: translate(-0%, -0%);
+           }
+
+        .im2{
+            position: absolute;
+            top: 84%;
+            left: 0%;
+            width: 1536px;
+            height: 2564.5px;
+        }
+
+        .imag {
+            height: 582px;
+            width: 547px;
+            position: absolute;
+            top: 487%;
+            left: 171%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 12%;
+        }
+
+        .heading1
+        {
+            text-align: center;
+            font-family: 'IBM Plex Sans';
+            color: #CFFFDA;
+            font-size: 80px;
+            position: absolute;
+            margin-top: 260%;
+            margin-left: 492%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+        .minih{
+            position: inherit;
+            margin-left: 4%;
+            color: #CFFFDA;
+            font-family: 'IBM Plex Sans';
+            font-size: 18px;
+            font-weight: 280;
+        }
+
+        .minih2{
+            position: inherit;
+            margin-left: 8%;
+            color: #216B39;
+            font-family: 'IBM Plex Sans';
+            font-size: 18px;
+            font-weight: 280;
+        }
+
+        .desc{
+            color: rgb(15, 13, 13);
+            position: relative;
+            margin-top: 83%;
+            margin-left: 55%;
+            font-size: 24px;
+            font-family: 'IBM Plex Serif';
+            font-weight: 150;
+        }
+    } */
+
+
+
+
+
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+</head>
+<body>
+
+    <div>
+    <img class="container" src="../static/4rth_PAGE_(1).jpg" alt="" href="{{ url_for('welcome_page') }}">
+    </div>
+    <div>
+    <img class="im2" src="../static/4rth_PAGE_(3).jpg" alt="">
+    </div>
+    <div>
+    <img class="imag" src="{{ image_path }}" alt="">
+    </div>
+    <div class="heading1">
+    <h2>More about {{ disease }}</h2>
+    </div>
+    <div>
+    <h3 class="desc"><b>Disease Info:</b> {{ info }} <br><b>Disease Cure:</b> {{ cure }}</h3>
+    </div>
+    
+</body>
+</html>

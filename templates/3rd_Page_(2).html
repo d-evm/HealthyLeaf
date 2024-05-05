@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Name</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/3rd_PAGE.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+        .container{
+           width: 1536px;
+           height: 78.8px;
+           background-color: #55D196;
+        }
+
+        img{
+            margin-left: -0.5%;
+        }
+
+       .heading1
+        {
+            text-align: center;
+            font-size: 28px;
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            color: #CFFFDA;
+            font-family: 'IBM Plex Sans';
+            font-size: 30px;
+        }
+
+        .heading2
+        {
+            text-align: center;
+            font-family: 'IBM Plex Serif';
+            color: white;
+            font-size:45px;
+            position: absolute;
+            top: 51%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            font-weight: bolder;
+        }
+
+        .butt1 {
+            font-weight: bold;
+            border: none;
+            background-color: #216B39;
+            color: #CFFFDA;
+            border-radius: 30px;
+            text-align: right;
+            font-size: 1.4em;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 120px;
+            padding-right: 120px;
+            position: absolute;
+            top: 86%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: dashed rgb(59, 55, 55) 3px;
+        }
+
+        .Note{
+            text-align: center;
+            font-size: 18px;
+            font-family: 'IBM Plex Sans';
+            font-weight: bolder;
+        }
+
+        .butt2:hover {
+            background-color: green;
+            color: #CFFFDA;
+        }
+        .butt1:hover {
+            background-color: green;
+            color: #CFFFDA;
+        }
+
+
+        @media (max-width: 720px) {
+            body{
+                height: 194vh;
+                position: inherit;
+                top: 0%;
+                width: 300px;
+            }
+
+            .container{
+                position: absolute;
+                left: 0.9%;
+                height: 78.8px;
+            } 
+            img{
+                height: 135px;
+                width: 1536px;
+            }
+            .heading1{
+                text-align: center;
+                font-size: 99px;
+                position: absolute;
+                top: 108%;
+                left: 196%;
+            }
+
+            .heading2{
+                text-align: center;
+                position: absolute;
+                top: 218%;
+                left: 196%;
+                font-size: 125px;
+            }
+
+            .butt1{
+                position: absolute;
+                top: 311%;
+                left: 196%;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 320px;
+                padding-right: 320px; 
+            }
+
+            .Note{
+                font-size: 40px;
+                text-align: center;
+            }
+        }
+
+    </style>
+
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('welcome_page') }}">
+        <img src="../static/cologo.png" alt="">
+    </a>
+    </div>
+    <div class="heading1">
+        <h2>Your Plant is Infected with</h2>
+    </div>
+    <div class="heading2" id="disease-name">
+        <p>{{ disease_name }}</p>
+    </div>
+    <a href="/4th_Page">
+    <button class="butt1">
+       
+       <p class="Note"> More About <br>Detected  Disease</p> 
+    </button>
+    </a>
+    <script>
+        const diseaseName = '{{ disease_name }}';
+        document.getElementById('disease-name').textContent = diseaseName;
+    </script>
+</body>
+</html>

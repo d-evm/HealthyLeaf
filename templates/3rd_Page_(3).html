@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../static/3rd_Page_BG.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .container{
+           width: 1536px;
+           height: 78.8px;
+           background-color: #55D196;
+           position: relative;
+           top: 0%;
+           transform: translate(-0%, -0%);
+        }
+
+        .imag{
+            height: 493px;
+            width: 555px;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        .heading1
+        {
+            text-align: center;
+            font-family: 'IBM Plex Sans';
+            color: #216B39;
+            font-size: 50px;
+            position: inherit;
+            margin-top: 22%;
+            margin-left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+
+        @media (max-width: 720px) {
+            body{
+                height: 260vh;
+                position: inherit;
+                top: 0%;
+                width: 300px;
+            }
+
+            .container{
+                position: absolute;
+                left: 0%;
+                height: 118.8px;
+                width: 375px;
+            } 
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('welcome_page') }}">
+    <img class="container" src="../static/3rd_Page_CornerLogo.jpg" alt="">
+    <img class="imag" src="../static/3rd_PAGE_Sec.jpg" alt="Logo">
+    <div class="heading1">
+        <h3>Invalid Image</h3>
+        <h5>Please Upload a proper image of Leaf</h5>
+    </div>
+    
+</body>
+</html>
