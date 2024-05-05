@@ -157,17 +157,13 @@ def get_disease_name(prediction):
 def find_disease_info_and_cure(disease_name):
     with open('disease info dataset\data3.csv', 'r') as file:
         reader = csv.reader(file)
-        next(reader)  # Skip headers
+        next(reader)
         for row in reader:
-            # print(disease_name.lower())
-            # print(row[1].lower())
-            # print()
-
             if row[1].lower() == disease_name.lower():
                 disease_info = row[2]
                 disease_cure = row[3]
                 return disease_info, disease_cure
-    return None, None  # Return None if disease not found
+    return None, None
 
 if __name__ == '__main__':
     app.run(debug=True)
