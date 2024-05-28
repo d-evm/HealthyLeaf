@@ -24,7 +24,7 @@ Healthy Leaf (HL) introduces an innovative approach to plant care through Smart 
 
 To run the application locally, follow these steps:
 
-1.  Download the pre-trained model from [here](https://chatgpt.com/c/e7f214f4-88a2-4f47-a21e-9fa75af208f5).
+1.  Download the pre-trained model from [here](https://drive.google.com/drive/folders/1fRc2_xooCC65pnSenHGaZRCTEzv9bkm0?usp=drive_link).
 2.  Place the downloaded model file in the main folder of the project.
 3. Clone the project
 
